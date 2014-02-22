@@ -175,6 +175,7 @@ u'parte',
 u'dolar',
 u'dolares',
 u'ano',
+u'anos',
 u'traves',
 u'esta'
 ]
