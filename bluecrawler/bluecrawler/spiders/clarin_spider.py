@@ -8,21 +8,16 @@ from bluecrawler.items import NewsItem
 import re
 
 
-def process_onclick(value):
-    m = re.search("canonical\('(.+?)'", value)
-    if m:
-        return m.group(1)
-
 
 class ClarinSpider(CrawlSpider):
     name = "clarin"
     allowed_domains = ["clarin.com"]
     start_urls = [
-        "http://buscador.clarin.com/dolar?filter=content_type:NWS;content_section:Econom%C3%ADa"
+        "http://buscador.clarin.com/dolar?order=0and;filter=content_section:Econom%C3%ADa;content_type:NWS;and;"
     ]
     rules=(
     Rule(SgmlLinkExtractor(allow=(),
-                           restrict_xpaths='//div[@class="noticias"]/h2/a'),
+                           restrict_xpaths='//ul[@class="desc"]/li[@class="txt"]/h2/a'),
          callback='parse_item'),
     )
 
