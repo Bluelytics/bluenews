@@ -184,6 +184,6 @@ u'millon',
 u'millones',
 u'ayer',
 u'hoy',
-u'mañana',
+u'manana',
 u'segun'
 ]
