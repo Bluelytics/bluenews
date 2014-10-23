@@ -177,5 +177,13 @@ u'dolares',
 u'ano',
 u'anos',
 u'traves',
-u'esta'
+u'esta',
+u'ciento',
+u'ciento.',
+u'millon',
+u'millones',
+u'ayer',
+u'hoy',
+u'manana',
+u'segun'
 ]
