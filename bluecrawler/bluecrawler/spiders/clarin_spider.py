@@ -26,9 +26,9 @@ class ClarinSpider(CrawlSpider):
         
         item = NewsItem()
         item['url'] = response.url
-        item['date'] = " ".join(sel.xpath('//div[@class="dia-hora"]/text()').extract() + sel.xpath('//div[@class="dia-hora"]/span/text()').extract())
-        item['title'] = sel.xpath('//div[@class="resize"]/h2/text()').extract()[0]
-        item['content'] = "\n".join(sel.xpath('//div[@class="bb-tu first-t interior"]/p/text()').extract())
+        item['date'] = ""
+        item['title'] = sel.xpath('//div[@class="int-nota-title"]/h1/text()').extract()[0]
+        item['content'] = " ".join(sel.xpath('//div[@class="nota"]//*[self::span or self::strong or self::p]/text()').extract())
         return item
 
         
